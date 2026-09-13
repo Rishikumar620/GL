@@ -1,0 +1,3490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================================
+         01. BASIC DOCUMENT INFORMATION
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#0a241d">
+
+    <title>
+        GOOD-LUCK Readymade Garments
+    </title>
+
+    <meta name="description"
+          content="GOOD-LUCK READYMADE GARMENTS - Premium family clothing store in Park Mansion, Hirapur, Dhanbad.">
+
+    <!-- =========================================================
+         02. GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- =========================================================
+         03. FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =========================================================
+         04. MAIN CSS
+    ========================================================== -->
+
+    <style>
+
+        /* =====================================================
+           04.1 ROOT VARIABLES
+        ====================================================== */
+
+        :root {
+
+            --ink: #071913;
+            --deep: #0a241d;
+            --green: #125c43;
+            --mint: #a7efd2;
+            --gold: #e7bd69;
+            --cream: #f8f4eb;
+
+            --glass: rgba(255, 255, 255, 0.11);
+            --line: rgba(255, 255, 255, 0.18);
+
+            --white: #ffffff;
+            --text: #17231f;
+            --muted: #66736c;
+
+            --shadow:
+                0 20px 50px rgba(0, 0, 0, 0.12);
+
+            --transition:
+                all 0.35s ease;
+        }
+
+
+        /* =====================================================
+           04.2 GLOBAL RESET
+        ====================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "DM Sans", sans-serif;
+
+            background: var(--cream);
+
+            color: var(--text);
+
+            overflow-x: hidden;
+        }
+
+
+        img {
+
+            display: block;
+
+            max-width: 100%;
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+        }
+
+
+        button {
+
+            font-family: inherit;
+        }
+
+
+        .container {
+
+            width: min(1180px, 92%);
+
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           04.3 BACKGROUND EFFECTS
+        ====================================================== */
+
+        body::before,
+        body::after {
+
+            content: "";
+
+            position: fixed;
+
+            border-radius: 50%;
+
+            filter: blur(90px);
+
+            pointer-events: none;
+
+            z-index: -1;
+
+            opacity: 0.35;
+        }
+
+
+        body::before {
+
+            width: 320px;
+
+            height: 320px;
+
+            background: #7de2b8;
+
+            top: 10%;
+
+            left: -140px;
+        }
+
+
+        body::after {
+
+            width: 420px;
+
+            height: 420px;
+
+            background: #f2c86f;
+
+            right: -180px;
+
+            bottom: 8%;
+        }
+
+
+        /* =====================================================
+           04.4 NAVIGATION BAR
+        ====================================================== */
+
+        .nav {
+
+            position: fixed;
+
+            top: 18px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: min(1180px, 92%);
+
+            z-index: 100;
+
+            background:
+                rgba(7, 25, 19, 0.56);
+
+            border:
+                1px solid var(--line);
+
+            backdrop-filter: blur(18px);
+
+            -webkit-backdrop-filter: blur(18px);
+
+            border-radius: 22px;
+
+            transition: var(--transition);
+        }
+
+
+        .nav.scrolled {
+
+            top: 8px;
+
+            background:
+                rgba(7, 25, 19, 0.90);
+
+            box-shadow:
+                0 16px 40px rgba(0, 0, 0, 0.18);
+        }
+
+
+        .nav-inner {
+
+            height: 74px;
+
+            padding: 0 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        /* =====================================================
+           04.5 BRAND / LOGO
+        ====================================================== */
+
+        .brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+
+        .logo {
+
+            width: 45px;
+
+            height: 45px;
+
+            border-radius: 15px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #f5d384,
+                    #bd8734
+                );
+
+            display: grid;
+
+            place-items: center;
+
+            color: #102018;
+
+            font-weight: 800;
+
+            box-shadow:
+                inset 0 1px rgba(255,255,255,.7),
+                0 8px 24px rgba(0,0,0,.2);
+        }
+
+
+        .brand b {
+
+            display: block;
+
+            color: white;
+
+            letter-spacing: 1.4px;
+
+            font-size: 0.96rem;
+        }
+
+
+        .brand small {
+
+            color: #b8c9c2;
+        }
+
+
+        /* =====================================================
+           04.6 DESKTOP NAVIGATION LINKS
+        ====================================================== */
+
+        .links {
+
+            display: flex;
+
+            gap: 26px;
+
+            color: #e8f0ec;
+
+            font-size: 0.92rem;
+        }
+
+
+        .links a {
+
+            position: relative;
+
+            transition: var(--transition);
+        }
+
+
+        .links a::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -7px;
+
+            width: 0;
+
+            height: 2px;
+
+            background: var(--gold);
+
+            transition: 0.3s ease;
+        }
+
+
+        .links a:hover::after {
+
+            width: 100%;
+        }
+
+
+        .links a:hover {
+
+            color: var(--gold);
+        }
+
+
+        /* =====================================================
+           04.7 BUTTONS
+        ====================================================== */
+
+        .btn,
+        .nav-cta {
+
+            border: 0;
+
+            cursor: pointer;
+
+            border-radius: 14px;
+
+            padding: 12px 18px;
+
+            font-weight: 700;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            transition: var(--transition);
+        }
+
+
+        .btn:hover,
+        .nav-cta:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 14px 28px rgba(0,0,0,.18);
+        }
+
+
+        .nav-cta {
+
+            background: var(--gold);
+
+            color: #142019;
+        }
+
+
+        .primary {
+
+            background: var(--gold);
+
+            color: #16231c;
+        }
+
+
+        .secondary {
+
+            background:
+                rgba(255,255,255,.10);
+
+            color: white;
+
+            border:
+                1px solid var(--line);
+        }
+
+
+        /* =====================================================
+           04.8 MOBILE MENU BUTTON
+        ====================================================== */
+
+        .menu {
+
+            display: none;
+
+            color: white;
+
+            background: none;
+
+            border: 0;
+
+            font-size: 1.35rem;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           05. HERO SECTION
+        ====================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            background:
+                radial-gradient(
+                    circle at 76% 35%,
+                    rgba(105,196,155,.25),
+                    transparent 28%
+                ),
+                linear-gradient(
+                    135deg,
+                    #061b15,
+                    #0d3c2e 55%,
+                    #124e39
+                );
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .orb {
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(255,255,255,.12);
+
+            animation:
+                float 7s ease-in-out infinite;
+        }
+
+
+        .orb.one {
+
+            width: 430px;
+
+            height: 430px;
+
+            right: 5%;
+
+            top: 13%;
+        }
+
+
+        .orb.two {
+
+            width: 240px;
+
+            height: 240px;
+
+            right: 18%;
+
+            bottom: -80px;
+
+            animation-delay: -2s;
+        }
+
+
+        @keyframes float {
+
+            0%,
+            100% {
+
+                transform: translateY(0);
+            }
+
+            50% {
+
+                transform: translateY(-20px);
+            }
+        }
+
+
+        .hero-grid {
+
+            padding: 140px 0 80px;
+
+            display: grid;
+
+            grid-template-columns:
+                1.08fr 0.92fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+
+        .eyebrow {
+
+            display: inline-flex;
+
+            gap: 8px;
+
+            align-items: center;
+
+            padding: 9px 14px;
+
+            border-radius: 999px;
+
+            background:
+                rgba(255,255,255,.09);
+
+            border:
+                1px solid var(--line);
+
+            color: #d7efe5;
+
+            font-size: 0.83rem;
+        }
+
+
+        .eyebrow i {
+
+            color: var(--gold);
+        }
+
+
+        .hero h1 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(3.2rem, 7vw, 6.6rem);
+
+            line-height: 0.94;
+
+            margin: 20px 0;
+        }
+
+
+        .hero h1 span {
+
+            color: var(--gold);
+        }
+
+
+        .hero p {
+
+            font-size: 1.08rem;
+
+            color: #c4d9d1;
+
+            max-width: 630px;
+
+            line-height: 1.75;
+        }
+
+
+        .hero-actions {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 13px;
+
+            margin: 30px 0;
+        }
+
+
+        .hero-meta {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 18px;
+
+            color: #d4e5de;
+
+            font-size: 0.92rem;
+        }
+
+
+        .hero-meta span {
+
+            display: flex;
+
+            gap: 8px;
+
+            align-items: center;
+        }
+
+
+        .hero-meta i {
+
+            color: var(--gold);
+        }
+
+
+        /* =====================================================
+           06. GLASSMORPHISM SHOWCASE
+        ====================================================== */
+
+        .glass-card {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,255,255,.16),
+                    rgba(255,255,255,.055)
+                );
+
+            border:
+                1px solid rgba(255,255,255,.2);
+
+            box-shadow:
+                0 25px 60px rgba(0,0,0,.22);
+
+            backdrop-filter:
+                blur(20px);
+
+            -webkit-backdrop-filter:
+                blur(20px);
+
+            border-radius: 28px;
+        }
+
+
+        .showcase {
+
+            padding: 20px;
+
+            position: relative;
+
+            animation:
+                rise .9s both;
+        }
+
+
+        @keyframes rise {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(30px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        .showcase-main {
+
+            min-height: 510px;
+
+            padding: 36px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            background:
+                linear-gradient(
+                    155deg,
+                    rgba(255,255,255,.18),
+                    rgba(255,255,255,.04)
+                ),
+                url(
+                    "https://www.santaeulalia.com/cdn/shop/files/Color_Block_690x790_crop_center.webp?v=1773836295"
+                )
+                center/cover;
+        }
+
+
+        .showcase-main::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            border-radius: 28px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(6,25,19,.05),
+                    rgba(6,25,19,.72)
+                );
+
+            z-index: 0;
+        }
+
+
+        .showcase-main > * {
+
+            position: relative;
+
+            z-index: 1;
+        }
+
+
+        .tag {
+
+            align-self: flex-start;
+
+            background:
+                rgba(7,25,19,.68);
+
+            border:
+                1px solid var(--line);
+
+            padding: 9px 13px;
+
+            border-radius: 999px;
+        }
+
+
+        .showcase h2 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 2.2rem;
+        }
+
+
+        .showcase-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: end;
+
+            gap: 15px;
+        }
+
+
+        .rating {
+
+            background:
+                rgba(255,255,255,.13);
+
+            padding: 12px 15px;
+
+            border-radius: 16px;
+
+            border:
+                1px solid var(--line);
+        }
+
+
+        .rating b {
+
+            color: var(--gold);
+
+            font-size: 1.1rem;
+        }
+
+
+        /* =====================================================
+           07. SECTION COMMON STYLES
+        ====================================================== */
+
+        section {
+
+            padding: 105px 0;
+        }
+
+
+        .section-head {
+
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: 0 auto 48px;
+        }
+
+
+        .section-head .eyebrow {
+
+            background: #e7f2ec;
+
+            color: #15513c;
+
+            border-color: #cce7db;
+        }
+
+
+        .section-head h2 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(2.3rem, 4vw, 4rem);
+
+            margin: 16px 0;
+
+            color: #10261e;
+        }
+
+
+        .section-head p {
+
+            color: #64716b;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           08. TRUST SECTION
+        ====================================================== */
+
+        .trust {
+
+            margin-top: -40px;
+
+            position: relative;
+
+            z-index: 5;
+        }
+
+
+        .trust-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            padding: 14px;
+        }
+
+
+        .trust-item {
+
+            padding: 20px;
+
+            border-right:
+                1px solid var(--line);
+
+            text-align: center;
+
+            color:  rgb(30, 70, 20);
+        }
+
+
+        .trust-item:last-child {
+
+            border: 0;
+        }
+
+
+        .trust-item i {
+
+            color: var(--gold);
+
+            font-size: 1.25rem;
+
+            margin-bottom: 8px;
+        }
+
+
+        .trust-item b {
+
+            display: block;
+        }
+
+
+        .trust-item span {
+
+            font-size: .82rem;
+
+            color: #4a7e66;
+        }
+
+
+        /* =====================================================
+           09. COLLECTIONS / CATEGORY CARDS
+        ====================================================== */
+
+        .categories {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .category {
+
+            min-height: 360px;
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            background: #19352a;
+
+            color: white;
+
+            isolation: isolate;
+
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease;
+        }
+
+
+        .category:hover {
+
+            transform:
+                translateY(-9px);
+
+            box-shadow:
+                0 25px 50px
+                rgba(18,53,39,.22);
+        }
+
+
+        /* =====================================================
+           09.1 CATEGORY IMAGE
+        ====================================================== */
+
+        .category-media {
+
+            position: absolute;
+
+            inset: 0;
+
+            overflow: hidden;
+        }
+
+
+        .category img {
+
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform .55s ease;
+        }
+
+
+        .category:hover img {
+
+            transform:
+                scale(1.08);
+        }
+
+
+        /* =====================================================
+           09.2 IMAGE DARK OVERLAY
+        ====================================================== */
+
+        .category-media::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(5,20,15,.05) 15%,
+                    rgba(5,20,15,.18) 35%,
+                    rgba(5,20,15,.92) 100%
+                );
+        }
+
+
+        /* =====================================================
+           09.3 CATEGORY ARROW
+        ====================================================== */
+
+        .category .arrow {
+
+            position: absolute;
+
+            top: 18px;
+
+            right: 18px;
+
+            width: 42px;
+
+            height: 42px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.16);
+
+            display: grid;
+
+            place-items: center;
+
+            backdrop-filter:
+                blur(8px);
+
+            border:
+                1px solid
+                rgba(255,255,255,.25);
+
+            z-index: 3;
+
+            transition:
+                all .3s ease;
+        }
+
+
+        .category:hover .arrow {
+
+            background:
+                var(--gold);
+
+            color:
+                #16231c;
+
+            transform:
+                rotate(-35deg);
+        }
+
+
+        /* =====================================================
+           09.4 CATEGORY CONTENT
+        ====================================================== */
+
+        .category-content {
+
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            padding: 22px;
+
+            z-index: 4;
+
+            color: white;
+        }
+
+
+        .category-content h3 {
+
+            font-size: 1.3rem;
+
+            line-height: 1.25;
+
+            margin-bottom: 6px;
+        }
+
+
+        .category-content p {
+
+            margin: 0;
+
+            color:
+                #e2eee9;
+
+            font-size: .88rem;
+
+            line-height: 1.5;
+
+            max-width: 90%;
+        }
+
+
+        .card-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-top: 14px;
+
+            color: var(--gold);
+
+            font-weight: 700;
+
+            font-size: .85rem;
+
+            transition: .3s ease;
+        }
+
+
+        .category:hover .card-link {
+
+            gap: 12px;
+        }
+
+
+        /* =====================================================
+           10. ABOUT SECTION
+        ====================================================== */
+
+        .about {
+
+            background:
+                #10281f;
+
+            color: white;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                .9fr 1.1fr;
+
+            gap: 65px;
+
+            align-items: center;
+        }
+
+
+        .about-image {
+
+            min-height: 500px;
+
+            border-radius: 30px;
+
+            background:
+                url(
+                    "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1000&q=85"
+                )
+                center/cover;
+
+            position: relative;
+        }
+
+
+        .about-copy h2 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(2.4rem, 4vw, 4rem);
+
+            line-height: 1.05;
+
+            margin: 16px 0;
+        }
+
+
+        .about-copy p {
+
+            color: #c5d7cf;
+
+            line-height: 1.8;
+
+            margin-bottom: 14px;
+        }
+
+
+        .feature-list {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 14px;
+
+            margin-top: 25px;
+        }
+
+
+        .feature {
+
+            padding: 16px;
+
+            border-radius: 16px;
+
+            background:
+                rgba(255,255,255,.07);
+
+            border:
+                1px solid var(--line);
+
+            transition:
+                .3s ease;
+        }
+
+
+        .feature:hover {
+
+            transform:
+                translateY(-5px);
+
+            background:
+                rgba(255,255,255,.12);
+        }
+
+
+        .feature i {
+
+            color: var(--gold);
+
+            margin-right: 8px;
+        }
+
+
+        /* =====================================================
+           11. CONTACT SECTION
+        ====================================================== */
+
+        .visit-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                .85fr 1.15fr;
+
+            gap: 25px;
+        }
+
+
+        .contact-card {
+
+            padding: 32px;
+
+            background: white;
+
+            border:
+                1px solid #e8e2d6;
+
+            border-radius: 28px;
+
+            box-shadow:
+                0 20px 50px
+                rgba(39,54,44,.08);
+        }
+
+
+        .contact-card h3 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 2rem;
+
+            color: #11281f;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =====================================================
+           11.1 CONTACT ROW
+        ====================================================== */
+
+        .contact-row {
+
+            display: flex;
+
+            gap: 15px;
+
+            padding: 17px 0;
+
+            border-bottom:
+                1px solid #eee8dd;
+        }
+
+
+        .contact-row:last-of-type {
+
+            border: 0;
+        }
+
+
+        .contact-icon {
+
+            width: 46px;
+
+            height: 46px;
+
+            flex: 0 0 46px;
+
+            border-radius: 15px;
+
+            background:
+                #e8f4ed;
+
+            color:
+                #156246;
+
+            display: grid;
+
+            place-items: center;
+        }
+
+
+        .contact-row b {
+
+            display: block;
+
+            margin-bottom: 4px;
+        }
+
+
+        .contact-row span,
+        .contact-row a {
+
+            color:
+                #66736c;
+
+            font-size:
+                .92rem;
+
+            line-height:
+                1.55;
+        }
+
+
+        .contact-row a:hover {
+
+            color:
+                var(--green);
+        }
+
+
+        /* =====================================================
+           11.2 CONTACT ACTION BUTTONS
+        ====================================================== */
+
+        .contact-actions {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 12px;
+
+            margin-top: 22px;
+        }
+
+
+        /* =====================================================
+           12. GOOGLE MAP
+        ====================================================== */
+
+        .map-wrap {
+
+            min-height: 570px;
+
+            border-radius: 28px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            box-shadow:
+                0 20px 50px
+                rgba(39,54,44,.12);
+
+            border:
+                1px solid #e8e2d6;
+        }
+
+
+        .map-wrap iframe {
+
+            width: 100%;
+
+            height: 100%;
+
+            border: 0;
+
+            position: absolute;
+
+            inset: 0;
+        }
+
+
+        .map-overlay {
+
+            position: absolute;
+
+            z-index: 2;
+
+            left: 20px;
+
+            right: 20px;
+
+            bottom: 20px;
+
+            padding: 15px 18px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 15px;
+        }
+
+
+        .map-overlay b {
+
+            display: block;
+
+            color: rgb(30, 70, 20);
+
+            margin-bottom: 4px;
+        }
+
+
+        .map-overlay span {
+
+            font-size: .88rem;
+
+            color: #26694a;
+        }
+
+
+        /* =====================================================
+           13. FOOTER
+        ====================================================== */
+
+        footer {
+
+            background:
+                #071913;
+
+            color:
+                #b8c9c2;
+
+            padding:
+                55px 0 25px;
+        }
+
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.4fr .8fr .9fr;
+
+            gap: 35px;
+        }
+
+
+        .footer-grid h4 {
+
+            color: white;
+
+            margin-bottom: 14px;
+        }
+
+
+        .footer-grid p {
+
+            line-height: 1.7;
+        }
+
+
+        .footer-links {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 9px;
+        }
+
+
+        .footer-links a {
+
+            transition: .3s ease;
+        }
+
+
+        .footer-links a:hover {
+
+            color: var(--gold);
+
+            transform:
+                translateX(5px);
+        }
+
+
+        .copyright {
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.1);
+
+            margin-top: 35px;
+
+            padding-top: 20px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            font-size: .8rem;
+        }
+
+
+        /* =====================================================
+           14. FLOATING WHATSAPP BUTTON
+        ====================================================== */
+
+        .wa {
+
+            position: fixed;
+
+            right: 24px;
+
+            bottom: 24px;
+
+            width: 60px;
+
+            height: 60px;
+
+            border-radius: 50%;
+
+            background:
+                #25d366;
+
+            color: white;
+
+            display: grid;
+
+            place-items: center;
+
+            font-size: 1.7rem;
+
+            z-index: 999;
+
+            box-shadow:
+                0 12px 30px
+                rgba(37,211,102,.35);
+
+            animation:
+                pulse 2s infinite;
+        }
+
+
+        .wa:hover {
+
+            transform:
+                scale(1.12);
+        }
+
+
+        @keyframes pulse {
+
+            0% {
+
+                box-shadow:
+                    0 0 0 0
+                    rgba(37,211,102,.55);
+            }
+
+            70% {
+
+                box-shadow:
+                    0 0 0 15px
+                    rgba(37,211,102,0);
+            }
+
+            100% {
+
+                box-shadow:
+                    0 0 0 0
+                    rgba(37,211,102,0);
+            }
+        }
+
+
+        /* =====================================================
+           15. SCROLL REVEAL ANIMATION
+        ====================================================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform:
+                translateY(30px);
+
+            transition:
+                opacity .7s ease,
+                transform .7s ease;
+        }
+
+
+        .reveal.visible {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* =====================================================
+           16. RESPONSIVE DESIGN
+        ====================================================== */
+
+        @media (max-width: 1000px) {
+
+            .hero-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .categories {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .about-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .visit-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .trust-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .trust-item:nth-child(2) {
+
+                border-right: 0;
+            }
+        }
+
+
+        /* =====================================================
+           17. MOBILE DESIGN
+        ====================================================== */
+
+        @media (max-width: 899px) {
+
+            .links {
+
+                display: none;
+            }
+
+
+            .links.mobile {
+
+                position: absolute;
+
+                top: 82px;
+
+                left: 0;
+
+                right: 0;
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 0;
+
+                padding: 12px;
+
+                background:
+                    rgba(7,25,19,.94);
+
+                border:
+                    1px solid var(--line);
+
+                border-radius: 20px;
+
+                backdrop-filter:
+                    blur(20px);
+            }
+
+
+            .links.mobile a {
+
+                padding: 14px;
+
+                border-radius: 12px;
+            }
+
+
+            .links.mobile a:hover {
+
+                background:
+                    rgba(255,255,255,.08);
+            }
+
+
+            .menu {
+
+                display: block;
+            }
+
+
+            .nav-cta {
+
+                display: none;
+            }
+
+
+            .hero-grid {
+
+                padding-top: 130px;
+            }
+
+
+            .showcase-main {
+
+                min-height: 430px;
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .copyright {
+
+                flex-direction: column;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            section {
+
+                padding:
+                    75px 0;
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    clamp(2.8rem, 14vw, 4.2rem);
+            }
+
+
+            .hero p {
+
+                font-size: .96rem;
+            }
+
+
+            .hero-actions {
+
+                flex-direction: column;
+            }
+
+
+            .hero-actions .btn {
+
+                width: 100%;
+            }
+
+
+            .categories {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .category {
+
+                min-height: 390px;
+            }
+
+
+            .trust-grid {
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .trust-item {
+
+                border-right: 0;
+
+                border-bottom:
+                    1px solid var(--line);
+            }
+
+
+            .feature-list {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .contact-actions {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .map-wrap {
+
+                min-height: 450px;
+            }
+
+
+            .map-overlay {
+
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+
+            .map-overlay .btn {
+
+                width: 100%;
+            }
+
+
+            .wa {
+
+                width: 55px;
+
+                height: 55px;
+
+                right: 18px;
+
+                bottom: 18px;
+            }
+        }
+
+
+        /* =====================================================
+           18. ACCESSIBILITY / REDUCED MOTION
+        ====================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            * {
+
+                animation-duration: .01ms !important;
+
+                animation-iteration-count: 1 !important;
+
+                transition-duration: .01ms !important;
+
+                scroll-behavior: auto !important;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         19. NAVIGATION
+    ========================================================== -->
+
+    <nav class="nav" id="nav">
+
+        <div class="nav-inner">
+
+            <!-- Brand -->
+
+            <a href="#home" class="brand">
+
+                <span class="logo">
+                    GL
+                </span>
+
+                <span>
+
+                    <b>
+                        GOOD-LUCK
+                    </b>
+
+                    <small>
+                        Readymade Garments
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <!-- Desktop / Mobile Links -->
+
+            <div class="links" id="links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#collections">
+                    Collections
+                </a>
+
+                <a href="#about">
+                    Our Story
+                </a>
+
+                <a href="#visit">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Desktop CTA -->
+
+            <a
+                href="tel:9835146540"
+                class="nav-cta">
+
+                <i class="fa-solid fa-phone"></i>
+
+                Call Now
+
+            </a>
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="menu"
+                id="menu"
+                aria-label="Open navigation menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================================
+         20. HERO SECTION
+    ========================================================== -->
+
+    <section
+        class="hero"
+        id="home">
+
+        <!-- Decorative circles -->
+
+        <div class="orb one"></div>
+
+        <div class="orb two"></div>
+
+
+        <div class="container hero-grid">
+
+
+            <!-- Hero Content -->
+
+            <div class="reveal">
+
+                <span class="eyebrow">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    Trusted family clothing store
+
+                </span>
+
+
+                <h1>
+
+                    GOOD-LUCK
+
+                    <br>
+
+                    <span>
+                        READYMADE
+                    </span>
+
+                    <br>
+
+                    GARMENTS
+
+                </h1>
+
+
+                <p>
+
+                    Discover quality fashion for men,
+                    women and kids at Park Mansion,
+                    Hirapur, Dhanbad.
+
+                </p>
+
+
+                <!-- Hero Buttons -->
+
+                <div class="hero-actions">
+
+                    <a
+                        href="https://wa.me/919835146540?text=Hello%20Good-Luck%20Garments%2C%20I%20want%20to%20enquire%20about%20clothes"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn primary">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        WhatsApp Us
+
+                    </a>
+
+
+                    <a
+                        href="#collections"
+                        class="btn secondary">
+
+                        Explore Collections
+
+                        <i class="fa-solid fa-arrow-down"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- Hero Meta -->
+
+                <div class="hero-meta">
+
+                    <span>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Park Mansion, Hirapur
+
+                    </span>
+
+
+                    <span>
+
+                        <i class="fa-regular fa-clock"></i>
+
+                        Open till 9:30 PM
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 21. HERO GLASS SHOWCASE
+            ================================================== -->
+
+            <div class="showcase">
+
+                <div class="showcase-main glass-card">
+
+
+                    <span class="tag">
+
+                        <i class="fa-solid fa-sparkles"></i>
+
+                        FAMILY FASHION
+
+                    </span>
+
+
+                    <div>
+
+                        <h2>
+
+                            Style for
+                            every generation.
+
+                        </h2>
+
+                        <p>
+
+                            Formal.
+                            Casual.
+                            Ethnic.
+                            Kids.
+                            Everyday essentials.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="showcase-bottom">
+
+                        <span>
+
+                            Explore the store
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+
+                        <div class="rating">
+
+                            <b>
+                                4.3★
+                            </b>
+
+                            <small>
+                                Google Rating
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         22. TRUST / STORE HIGHLIGHTS
+    ========================================================== -->
+
+    <div class="container trust">
+
+        <div class="trust-grid glass-card">
+
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-award"></i>
+
+                <b>
+                    Quality
+                </b>
+
+                <span>
+                    Selected garments
+                </span>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                <b>
+                    Fair Prices
+                </b>
+
+                <span>
+                    Value for money
+                </span>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-users"></i>
+
+                <b>
+                    Family Store
+                </b>
+
+                <span>
+                    Men • Women • Kids
+                </span>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <b>
+                    Easy to Reach
+                </b>
+
+                <span>
+                    Park Mansion, Hirapur
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         23. COLLECTIONS SECTION
+    ========================================================== -->
+
+    <section id="collections">
+
+        <div class="container">
+
+
+            <!-- Section Heading -->
+
+            <div class="section-head reveal">
+
+                <span class="eyebrow">
+                    OUR COLLECTIONS
+                </span>
+
+                <h2>
+                    Find your next favourite look.
+                </h2>
+
+                <p>
+
+                    Explore our clothing categories
+                    and contact us on WhatsApp
+                    for availability and pricing.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 24. CATEGORY GRID
+            ================================================== -->
+
+            <div class="categories">
+
+
+                <!-- =================================================
+                     24.1 MEN'S FORMAL
+                ================================================== -->
+
+                <a
+                    class="category reveal"
+                    href="https://wa.me/919835146540?text=Hello%2C%20I%20want%20to%20enquire%20about%20Men%27s%20Formal%20Wear"
+                    target="_blank"
+                    rel="noopener">
+
+                    <div class="category-media">
+
+                        <img
+                            src="https://granvia.mx/cdn/shop/collections/Image_2.jpg?v=1752791625&width=1200"
+                            alt="Men's formal wear"
+                            loading="lazy">
+
+                        <span class="arrow">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="category-content">
+
+                        <h3>
+                            Men's Formal
+                        </h3>
+
+                        <p>
+                            Shirts, trousers & smart tailoring
+                        </p>
+
+                        <span class="card-link">
+
+                            Enquire
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- =================================================
+                     24.2 MEN'S CASUAL
+                ================================================== -->
+
+                <a
+                    class="category reveal"
+                    href="https://wa.me/919835146540?text=Hello%2C%20I%20want%20to%20enquire%20about%20Men%27s%20Casual%20Wear"
+                    target="_blank"
+                    rel="noopener">
+
+                    <div class="category-media">
+
+                        <img
+                            src="https://cdn.sanity.io/images/oz7nkolm/production/1d6fe1a2b6da3fa9e05f14d185f8ae7f28139ea6-4248x6372.jpg?fm=webp&h=900&q=82&rect=0%2C354%2C4248%2C5664&w=700"
+                            alt="Men's casual wear"
+                            loading="lazy">
+
+                        <span class="arrow">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="category-content">
+
+                        <h3>
+                            Men's Casual
+                        </h3>
+
+                        <p>
+                            Relaxed layers, tees & everyday looks
+                        </p>
+
+                        <span class="card-link">
+
+                            Enquire
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- =================================================
+                     24.3 WOMEN'S WEAR
+                ================================================== -->
+
+                <a
+                    class="category reveal"
+                    href="https://wa.me/919835146540?text=Hello%2C%20I%20want%20to%20enquire%20about%20Women%27s%20Wear"
+                    target="_blank"
+                    rel="noopener">
+
+                    <div class="category-media">
+
+                        <img
+                            src="https://www.santaeulalia.com/cdn/shop/files/Color_Block_690x790_crop_center.webp?v=1773836295"
+                            alt="Women's wear"
+                            loading="lazy">
+
+                        <span class="arrow">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="category-content">
+
+                        <h3>
+                            Women's Wear
+                        </h3>
+
+                        <p>
+                            Modern dresses, tops & seasonal styles
+                        </p>
+
+                        <span class="card-link">
+
+                            Enquire
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- =================================================
+                     24.4 ETHNIC WEAR
+                ================================================== -->
+
+                <a
+                    class="category reveal"
+                    href="https://wa.me/919835146540?text=Hello%2C%20I%20want%20to%20enquire%20about%20Ethnic%20Wear"
+                    target="_blank"
+                    rel="noopener">
+
+                    <div class="category-media">
+
+                        <img
+                            src="https://koshurindia.com/cdn/shop/articles/Laptop_Banner_e15b8aa7-7b94-4903-848d-1d69ababfc38.jpg?v=1781714245&width=1200"
+                            alt="Ethnic wear"
+                            loading="lazy">
+
+                        <span class="arrow">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="category-content">
+
+                        <h3>
+                            Ethnic Wear
+                        </h3>
+
+                        <p>
+                            Kurtas, suits & festive favourites
+                        </p>
+
+                        <span class="card-link">
+
+                            Enquire
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- =================================================
+                     24.5 KIDS WEAR
+                ================================================== -->
+
+                <a
+                    class="category reveal"
+                    href="https://wa.me/919835146540?text=Hello%2C%20I%20want%20to%20enquire%20about%20Kids%20Wear"
+                    target="_blank"
+                    rel="noopener">
+
+                    <div class="category-media">
+
+                        <img
+                            src="https://www.junioredition.com/cdn/shop/articles/Wynken-SS26-Wynk-Raglan-Sweat-Parasol-Python-Green-Lifestyle-1_cdbba082-ac04-4330-81b1-795147651b5d.jpg?crop=center&height=1200&v=1770210140&width=1200"
+                            alt="Kids clothing"
+                            loading="lazy">
+
+                        <span class="arrow">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="category-content">
+
+                        <h3>
+                            Kids Wear
+                        </h3>
+
+                        <p>
+                            Fresh, comfortable looks for boys & girls
+                        </p>
+
+                        <span class="card-link">
+
+                            Enquire
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- =================================================
+                     24.6 JEANS & TROUSERS
+                ================================================== -->
+
+                <a
+                    class="category reveal"
+                    href="https://wa.me/919835146540?text=Hello%2C%20I%20want%20to%20enquire%20about%20Jeans%20and%20Trousers"
+                    target="_blank"
+                    rel="noopener">
+
+                    <div class="category-media">
+
+                        <img
+                            src="https://www.chloe.com/on/demandware.static/-/Library-Sites-Chloe-WW/default/dw59837e96/NEWS/CAROUSEL/260128_CHLOE_FALL26_4x5_7.jpg"
+                            alt="Jeans and trousers"
+                            loading="lazy">
+
+                        <span class="arrow">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="category-content">
+
+                        <h3>
+                            Jeans & Trousers
+                        </h3>
+
+                        <p>
+                            Straight, relaxed & contemporary fits
+                        </p>
+
+                        <span class="card-link">
+
+                            Enquire
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- =================================================
+                     24.7 WINTER WEAR
+                ================================================== -->
+
+                <a
+                    class="category reveal"
+                    href="https://wa.me/919835146540?text=Hello%2C%20I%20want%20to%20enquire%20about%20Winter%20Wear"
+                    target="_blank"
+                    rel="noopener">
+
+                    <div class="category-media">
+
+                        <img
+                            src="https://www.luxudress.com/cdn/shop/articles/Armedangels-Autumn-2026-Redesigned-heritage_-reengineered-materials_01.jpg?v=1775567909&width=1600"
+                            alt="Winter wear"
+                            loading="lazy">
+
+                        <span class="arrow">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="category-content">
+
+                        <h3>
+                            Winter Wear
+                        </h3>
+
+                        <p>
+                            Jackets, knits & layered essentials
+                        </p>
+
+                        <span class="card-link">
+
+                            Enquire
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- =================================================
+                     24.8 NEW ARRIVALS
+                ================================================== -->
+
+                <a
+                    class="category reveal"
+                    href="https://wa.me/919835146540?text=Hello%2C%20I%20want%20to%20enquire%20about%20New%20Arrivals"
+                    target="_blank"
+                    rel="noopener">
+
+                    <div class="category-media">
+
+                        <img
+                            src="https://www.santaeulalia.com/cdn/shop/files/Color_Block_690x790_crop_center.webp?v=1773836295"
+                            alt="New fashion arrivals"
+                            loading="lazy">
+
+                        <span class="arrow">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="category-content">
+
+                        <h3>
+                            New Arrivals
+                        </h3>
+
+                        <p>
+                            Explore the newest looks in store
+                        </p>
+
+                        <span class="card-link">
+
+                            Enquire
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         25. ABOUT SECTION
+    ========================================================== -->
+
+    <section
+        class="about"
+        id="about">
+
+        <div class="container about-grid">
+
+
+            <!-- About Image -->
+
+            <div
+                class="about-image reveal">
+
+            </div>
+
+
+            <!-- About Content -->
+
+            <div class="about-copy reveal">
+
+                <span class="eyebrow">
+                    OUR STORY
+                </span>
+
+
+                <h2>
+
+                    More than clothes.
+
+                    <br>
+
+                    <span style="color: var(--gold)">
+                        A familiar place to shop.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    GOOD-LUCK READYMADE GARMENTS
+                    is located in Park Mansion,
+                    Hirapur, Dhanbad.
+
+                </p>
+
+
+                <p>
+
+                    The store offers readymade clothing
+                    for the whole family, with a focus
+                    on quality, practical choice and
+                    fair prices.
+
+                </p>
+
+
+                <p>
+
+                    Whether you are looking for
+                    formal wear, everyday casuals,
+                    ethnic styles or kids' clothing,
+                    customers can explore multiple
+                    categories under one roof.
+
+                </p>
+
+
+                <!-- Features -->
+
+                <div class="feature-list">
+
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Latest designs
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Family fashion
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Quality garments
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Easy enquiries
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         26. VISIT / CONTACT SECTION
+    ========================================================== -->
+
+    <section id="visit">
+
+        <div class="container">
+
+
+            <!-- Heading -->
+
+            <div class="section-head reveal">
+
+                <span class="eyebrow">
+                    VISIT THE STORE
+                </span>
+
+                <h2>
+                    Come in. Find your style.
+                </h2>
+
+                <p>
+
+                    Call, WhatsApp or open the map
+                    for quick navigation to the store.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="visit-grid reveal">
+
+
+                <!-- =================================================
+                     27. CONTACT CARD
+                ================================================== -->
+
+                <div class="contact-card">
+
+
+                    <h3>
+                        Let's connect
+                    </h3>
+
+
+                    <!-- Address -->
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <b>
+                                Store Address
+                            </b>
+
+                            <span>
+                                Park Mansion, Hirapur,
+                                Dhanbad, Jharkhand
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <b>
+                                Call Us
+                            </b>
+
+                            <a href="tel:9835146540">
+                                9835146540
+                            </a>
+
+                            <br>
+
+                            <a href="tel:9955912131">
+                                9955912131
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Timing -->
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-regular fa-clock"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <b>
+                                Store Hours
+                            </b>
+
+                            <span>
+                                Open Daily •
+                                Closes at 9:30 PM
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Owner -->
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <b>
+                                Store Owner
+                            </b>
+
+                            <span>
+                                Ashok Kumar
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Contact Buttons -->
+
+                    <div class="contact-actions">
+
+
+                        <a
+                            class="btn primary"
+                            href="tel:9835146540">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            Call Now
+
+                        </a>
+
+
+                        <a
+                            class="btn"
+                            style="
+                                background:#e9f3ed;
+                                color:#13583f;
+                            "
+                            href="https://wa.me/919835146540?text=Hello%20Good-Luck%20Garments"
+                            target="_blank"
+                            rel="noopener">
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                            WhatsApp
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     28. GOOGLE MAP
+                ================================================== -->
+
+                <div class="map-wrap">
+
+
+                    <iframe
+                        src="https://maps.google.com/maps?q=Good-Luck%20Park%20Mansion%20Hirapur%20Dhanbad&output=embed"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="GOOD-LUCK READYMADE GARMENTS location">
+                    </iframe>
+
+
+                    <!-- Map Glass Overlay -->
+
+                    <div class="map-overlay glass-card">
+
+
+                        <div>
+
+                            <b>
+                                GOOD-LUCK READYMADE GARMENTS
+                            </b>
+
+                            <span>
+                                Park Mansion / Park Market,
+                                Hirapur
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            class="btn primary"
+                            href="https://maps.app.goo.gl/nKyu9taAYAmhKPH4A"
+                            target="_blank"
+                            rel="noopener">
+
+                            <i class="fa-solid fa-diamond-turn-right"></i>
+
+                            Navigate
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         29. FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+
+            <div class="footer-grid">
+
+
+                <!-- Footer Brand -->
+
+                <div>
+
+                    <div class="brand">
+
+                        <span class="logo">
+                            GL
+                        </span>
+
+                        <span>
+
+                            <b>
+                                GOOD-LUCK
+                            </b>
+
+                            <small>
+                                Readymade Garments
+                            </small>
+
+                        </span>
+
+                    </div>
+
+
+                    <p>
+
+                        Your local destination for
+                        quality readymade garments
+                        for men, women and kids.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Footer Links -->
+
+                <div>
+
+                    <h4>
+                        Explore
+                    </h4>
+
+
+                    <div class="footer-links">
+
+                        <a href="#home">
+                            Home
+                        </a>
+
+                        <a href="#collections">
+                            Collections
+                        </a>
+
+                        <a href="#about">
+                            Our Story
+                        </a>
+
+                        <a href="#visit">
+                            Visit & Contact
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Footer Contact -->
+
+                <div>
+
+                    <h4>
+                        Store Contact
+                    </h4>
+
+
+                    <p>
+
+                        9835146540
+
+                        <br>
+
+                        9955912131
+
+                        <br>
+
+                        Park Mansion,
+                        Hirapur, Dhanbad
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Copyright -->
+
+            <div class="copyright">
+
+                <span>
+
+                    © 2026 GOOD-LUCK READYMADE GARMENTS.
+                    All Rights Reserved.
+
+                </span>
+
+
+                <span>
+
+                    Designed for a premium retail experience.
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         30. FLOATING WHATSAPP
+    ========================================================== -->
+
+    <a
+        class="wa"
+        href="https://wa.me/919835146540?text=Hello%20Good-Luck%20Garments%2C%20I%20want%20to%20enquire"
+        target="_blank"
+        rel="noopener"
+        aria-label="WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+
+    <!-- =========================================================
+         31. JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           31.1 GET DOM ELEMENTS
+        ====================================================== */
+
+        const nav =
+            document.getElementById("nav");
+
+        const menu =
+            document.getElementById("menu");
+
+        const links =
+            document.getElementById("links");
+
+
+
+        /* =====================================================
+           31.2 NAVBAR SCROLL EFFECT
+        ====================================================== */
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                nav.classList.toggle(
+                    "scrolled",
+                    window.scrollY > 30
+                );
+
+            }
+        );
+
+
+
+        /* =====================================================
+           31.3 MOBILE MENU
+        ====================================================== */
+
+        menu.addEventListener(
+            "click",
+            function () {
+
+                links.classList.toggle(
+                    "mobile"
+                );
+
+                const isOpen =
+                    links.classList.contains(
+                        "mobile"
+                    );
+
+
+                menu.innerHTML =
+                    isOpen
+
+                    ? '<i class="fa-solid fa-xmark"></i>'
+
+                    : '<i class="fa-solid fa-bars"></i>';
+
+            }
+        );
+
+
+
+        /* =====================================================
+           31.4 CLOSE MOBILE MENU AFTER CLICK
+        ====================================================== */
+
+        document
+            .querySelectorAll(".links a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        if (
+                            window.innerWidth < 900
+                        ) {
+
+                            links.classList.remove(
+                                "mobile"
+                            );
+
+                            menu.innerHTML =
+                                '<i class="fa-solid fa-bars"></i>';
+
+                        }
+
+                    }
+                );
+
+            });
+
+
+
+        /* =====================================================
+           31.5 SCROLL REVEAL ANIMATION
+        ====================================================== */
+
+        const observer =
+            new IntersectionObserver(
+                function (entries) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+                                observer.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+
+        /* =====================================================
+           31.6 OBSERVE ALL REVEAL ELEMENTS
+        ====================================================== */
+
+        document
+            .querySelectorAll(".reveal")
+            .forEach(function (element) {
+
+                observer.observe(element);
+
+            });
+
+
+
+        /* =====================================================
+           31.7 IMAGE ERROR HANDLING
+        ====================================================== */
+
+        document
+            .querySelectorAll(".category img")
+            .forEach(function (image) {
+
+                image.addEventListener(
+                    "error",
+                    function () {
+
+                        /*
+                         * If an external image fails,
+                         * prevent the broken image icon
+                         * from destroying the card layout.
+                         */
+
+                        image.style.opacity = "0";
+
+                    }
+                );
+
+            });
+
+
+    </script>
+
+
+</body>
+
+</html>
